@@ -14,50 +14,6 @@ body{
     align-items: center;
 }
 
-.container{
-   width: 800px;
-   max-width: 80%;
-   background-color:turquoise;
-   border-radius: 5px;
-   padding: 15px;
-   box-shadow: 0 0 10px ;
-
-}
-.btn-grid{
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20x 0;
-}
-.btn{
-    background-color: wheat;
-    border: 1px black;
-    border-radius: 10px 10px;
-    color: black;
-    outline: none;
-}
-.btn:hover{
-    background-color: lightblue;
-}
-.btn.correct{
-    background-color: green;
-    color: white;
-}
-
-.btn.wrong{
-    background-color: red;
-}
-
-.start-btn, .next-btn{
-    font-size: 15px;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-.control{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .hide{
     display: none;
 }

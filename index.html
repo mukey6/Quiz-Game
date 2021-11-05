@@ -5,28 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Quiz </title>
+    <title>Quiz game</title>
 </head>
 <body>
-    <section class="container">
+<section class="container">
+    <div id="timer"> Timer: <span>0</span></div>
+    <div >
+            <h1>Sport Quiz</h1>
+            <p id="intro">
+                Lets see how well you know football. Answer the following questions
+                before the timer runs out, if you answer the question wrong time will
+                get deducted from you 
+            </p>
+            <button id="start-btn" class="start-btn btn">Start</button>
+
+     </div>
         <div id="question-container" class="hide"> 
             <div id="question">Question</div>
             <div id="answer-button" class="btn-grid">
-                <button class="btn ">Answer 1</button>
-                <button class="btn ">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+                <ul>
+                    <li class="btn">Answer 1 </li>
+                    <li class="btn">Answer 2 </li>
+                    <li class="btn">Answer 3 </li>
+                    <li class="btn">Answer 4 </li>
+                </ul>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+
             </div>
         </div>
-        <div class="controls"> 
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
+</section>
 
-        </div>
-        
-    </section>
 
-   
+
+
+
+
+
+
+
+
+
+
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

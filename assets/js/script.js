@@ -1,35 +1,66 @@
-const startButton =document.getElementById("start-btn")
-const questionContainerEl = document.getElementById("question-container")
-const questionEl = document.getElementById("question")
-const answerButtonEl = document.getElementById("answer-button")
-// const startButton =document.getElementById("start-btn")
+var startButton = document.getElementById("start-btn")
+var quesionContainerEl = document.getElementById("question-container")
+var nextButton = document.getElementById("next-btn")
+var intro = document.getElementById("intro")
+var quesionEl = document.getElementById("question")
 
 startButton.addEventListener("click", startGame)
-function startGame(){
+function startGame (){
 startButton.classList.add("hide")
-questionContainerEl.classList.remove("hide")
+quesionContainerEl.classList.remove("hide")
+intro.classList.add("hide")
+
 nextQuestion()
 }
 
+nextButton.addEventListener("click", nextQuestion)
 function nextQuestion(){
-showQuestion()
-}
-function showQuestion(question){
-questionEl.innerText = question.question
-console.log("question should show up")
+    nextButton.classList.remove("hide")
+displayQuestion()
 }
 
-function selectAnswer(){
+function displayQuestion(){
+    for (var i=0; i < questions.length; i++ ){
+        quesionEl.innerText = questions[i].title
+
+    }
 
 }
+
+function displayAnswers(){
+    
+}
+
+console.log("show answer")
+
 var questions = [
     {
-        question: "guess the answer what?",
-        answer:[
-            {text: "what", correct: true},
-            {text: "yes", correct: false}
-        ]
-    }
+        title: "Placeholder question:",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        answer: "answer1"
+      },
+
+      {
+        title: "Placeholder question two:",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        answer: "answer1"
+      },
+      {
+        title: "Placeholder question three:",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        answer: "answer1"
+      },
+      {
+        title: "Placeholder question four:",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        answer: "answer1"
+      },
+      {
+        title: "Placeholder question five:",
+        choices: ["answer1", "answer2", "answer3", "answer4"],
+        answer: "answer1"
+      },
+  
+    
+    
 ]
-
-
