@@ -10,6 +10,7 @@
 <body>
 <section class="container">
     <div id="timer"> Time: 0</div>
+    <div id="current-score">Current Score: <span id="score">0</span> </div>
     <div >
             <h1>Sport Quiz</h1>
             <p id="intro">
@@ -20,20 +21,21 @@
             <button id="start-btn" class="start-btn btn">Start</button>
 
      </div>
-        <div id="question-container" class="hide"> 
+     <div id="question-container" class="hide"> 
             <div id="question">Question</div>
-            <div id="answer-button" class="btn-grid">
-                <!-- <ul>
-                    <li class="btn">Answer 1 </li>
-                    <li class="btn">Answer 2 </li>
-                    <li class="btn">Answer 3 </li>
-                    <li class="btn">Answer 4 </li>
-                </ul> -->
-            </div>
-                <button id="next-btn" class="next-btn btn hide">Next</button>
-
+            <div id="answer-button" class="btn-grid"></div>
             
+                <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
+            <div id="end-game" class=" hide">
+                <h2>Game over</h2>
+                <p>Final Score <span id="final-score">.</span></p>
+                <p>
+                    Enter Your Initials <input type="text">
+                    <button>Submit</button>
+                </p>
+             </div>
+        
 </section>
 
 
