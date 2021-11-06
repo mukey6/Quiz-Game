@@ -19,6 +19,7 @@ body{
 }
 .btn:hover{
 color: blueviolet;
+background-color: turquoise;
 }
 section{
     text-align: center;

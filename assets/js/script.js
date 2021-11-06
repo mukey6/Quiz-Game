@@ -15,11 +15,11 @@ startButton.classList.add("hide")
 quesionContainerEl.classList.remove("hide")
 intro.classList.add("hide")
 //need to stop timer 
-setInterval(function(){
-  countDown--;
-  timer.textContent=countDown;
-  console.log("you have " + countDown + "secs" )
-}, 1000)
+// setInterval(function(){
+//   countDown--;
+//   timer.textContent=countDown;
+//   console.log("you have " + countDown + "secs" )
+// }, 1000)
 
 nextQuestion()
 }
@@ -35,33 +35,46 @@ console.log("show next questiom")
       }
       // will come back to this to fix
       else {
-        console.log("game over")
+        endGame()
       }
+      
 currentQuestionIndex++;
 
 }
 
-function displayQuestion(){
-        quesionEl.innerText = questions[currentQuestionIndex].title
-        
-        // this will set answer buttons to empty
-        // answerEl.innerText="";
-        
+function displayQuestion() {
+  quesionEl.innerText = questions[currentQuestionIndex].title
+  questions[currentQuestionIndex].choices.forEach(choice => {
+    console.log(choice);
+    let button = document.createElement("li")
+            button.innerText=choice
+            answerEl.appendChild(button)
+          button.className = "btn"
+  })
 }
-function displayAnswers(){
-choices.array.forEach(answers => {
-  let button = document.createElement("button")
-  button.innerText=answers;
-  answerEl.appendChild(button)
-});
+answerEl.addEventListener("click", selectedAnswer)
+function selectedAnswer(){
+if (this !== questions[currentQuestionIndex].answer){
+  console.log("you chose wrong")
+}
+else{
+
+  console.log("right answer")
 }
 
 
+}
+
+
+function endGame(){
+
+  quesionContainerEl.classList.add("hide")
+}
 var questions = [
     {
         title: "Placeholder question:",
-        choices: ["answer1", "answer2", "answer3", "answer4"],
-        answer: "answer1"
+        choices: ["this answer1", "this answer2", "this answer3", "this answer4"],
+        answer: "this answer1"
       },
 
       {
