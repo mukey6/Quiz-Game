@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Courier New', Courier, Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: wheat;
     padding: 0;
     margin: 0;
     display: flex;
@@ -19,4 +19,8 @@ body{
 }
 .btn:hover{
 color: blueviolet;
+}
+section{
+    text-align: center;
+    padding: 0 33%;
 }

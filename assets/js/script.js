@@ -1,4 +1,5 @@
 var currentQuestionIndex = 0;
+var countDown = 5;
 
 var startButton = document.getElementById("start-btn")
 var quesionContainerEl = document.getElementById("question-container")
@@ -6,12 +7,19 @@ var nextButton = document.getElementById("next-btn")
 var intro = document.getElementById("intro")
 var quesionEl = document.getElementById("question")
 var answerEl = document.getElementById("answer-button")
+var timer = document.getElementById("timer")
 
 startButton.addEventListener("click", startGame)
 function startGame (){
 startButton.classList.add("hide")
 quesionContainerEl.classList.remove("hide")
 intro.classList.add("hide")
+//need to stop timer 
+setInterval(function(){
+  countDown--;
+  timer.textContent=countDown;
+  console.log("you have " + countDown + "secs" )
+}, 1000)
 
 nextQuestion()
 }
@@ -38,12 +46,14 @@ function displayQuestion(){
         
         // this will set answer buttons to empty
         // answerEl.innerText="";
-
-
+        
 }
-
 function displayAnswers(){
-    
+choices.array.forEach(answers => {
+  let button = document.createElement("button")
+  button.innerText=answers;
+  answerEl.appendChild(button)
+});
 }
 
 
