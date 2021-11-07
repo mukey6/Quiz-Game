@@ -19,10 +19,12 @@ highScore.forEach(function(score) {
 
 }
 function clearHighscores() {
-    window.localStorage.removeItem("highscores");
+    window.localStorage.removeItem("highScore");
     window.location.reload();
+
   }
   
   document.getElementById("clear").onclick = clearHighscores;
+
 
 displayHighScores()

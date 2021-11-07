@@ -48,7 +48,6 @@ function nextQuestion(){
     if (
       currentQuestionIndex < questions.length ){
         displayQuestion()
-console.log("show next questiom")
       } 
       // will come back to this to fix
       else {
@@ -104,11 +103,8 @@ function endGame(){
   gameOver.classList.remove("hide")
 
   clearInterval(timer)
-  console.log("should stop time", countDown)
   finalScoreEl.textContent = countDown;
   time.classList.add("hide")
-
-  
 }
 
 var saveHighScore = function (){
@@ -135,7 +131,6 @@ window.location.href = "highscore.html";
 
 // click on submit button 
 submitBtn.onclick= saveHighScore
-console.log(submitBtn + "you clicked submit")
 
 //list of questions
 var questions = [
