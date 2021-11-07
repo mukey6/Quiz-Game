@@ -8,9 +8,11 @@
     <title>Quiz game</title>
 </head>
 <body>
+    <div class="scores"><a href="highscore.html">View Highscores</a></div>
+
 <section class="container">
     <div id="timer"> Time: 0</div>
-    <div id="current-score">Current Score: <span id="score">0</span> </div>
+    <!-- <div id="current-score">Current Score: <span id="score">0</span> </div> -->
     <div >
             <h1>Sport Quiz</h1>
             <p id="intro">
@@ -31,10 +33,11 @@
                 <h2>Game over</h2>
                 <p>Final Score <span id="final-score">.</span></p>
                 <p>
-                    Enter Your Initials <input type="text">
-                    <button>Submit</button>
+                    Enter Your Initials <input type="text" id="initials">
+                    <button id="submit">Submit</button>
                 </p>
              </div>
+             <div class="feedback" id="feedback"></div>
         
 </section>
 

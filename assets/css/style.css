@@ -23,7 +23,7 @@ background-color: turquoise;
 }
 section{
     text-align: center;
-    padding: 0 33%;
+    padding: 0 20%;
 }
 
 .btn-grid{
@@ -35,3 +35,19 @@ section{
     border-radius: 10px;
     margin: 3px; 
 }
+.scores{
+margin: 0 0 0 15px;
+text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.feedback {
+    font-style:italic ;
+    font-size: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: blue;
+  }
