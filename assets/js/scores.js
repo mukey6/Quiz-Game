@@ -6,7 +6,7 @@ function displayHighScores (){
     return b.score - a.score;
   });
 
-highscore.forEach(function(score) {
+highScore.forEach(function(score) {
     var scoreList = document.createElement("li")
     console.log(scoreList + " this is your score")
     scoreList.innerHTML= score.initials + " : " + score.score
